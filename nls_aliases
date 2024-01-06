@@ -1,0 +1,7 @@
+# Aliases for translation files
+# Left part - language/locale to substitute (may include wildcards)
+# Right part - existing translation file
+
+ 	ru_*	= ru_RU
+ 	*	= en_US
+
