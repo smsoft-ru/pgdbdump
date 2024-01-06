@@ -2,7 +2,9 @@ pgdbdump
 
 A set of linux shell scripts intended for creating full, differential or incremental dumps of postgres databases.
 This set of scripts also include interactive based on dialog (which in turn is ncurses-based) script for restore these dumps.
+
 (C) 2024 Sergey Merzlikin sm@smsoft.ru
+
 Licensed under the GNU General Public License v3.0.
 
 pgdbdump.sh is used to create dumps. How it works creating full dump:
