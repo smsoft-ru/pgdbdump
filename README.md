@@ -59,5 +59,6 @@ Installation:
  - Check dependencies and install any if required
  - Copy config files to /etc/pgdbdump directory
  - Copy all other files to any directory in file system (all files must be together)
+ - Change permissions to make executable for pgdbdump.sh, pgdbdump_diff.sh, pgdbdump_full.sh and pgdbrestore.sh
  - Set up backup directory in config files
  - Set up cron jobs to create dumps on regular basis
