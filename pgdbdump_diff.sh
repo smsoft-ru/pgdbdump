@@ -15,6 +15,17 @@ scriptdir="$(dirname "$(realpath "$0")")"
 # Source common script part
 . "$scriptdir/pgdbdump_common.sh"
 
+# Check incremental mode parameter
+if [ -n "$2" ]
+then
+    if [ "$2" = "inc" ] ; then
+	incmode="$2"
+    else
+	echo "Invalid parameter \"$2\""
+	exit 9
+    fi
+fi
+
 # locate and read latest dump timestamp file
 lfdfile=${backpath}/_${dbname}_latest_dump
 if [ -f "$lfdfile" ] ; then
