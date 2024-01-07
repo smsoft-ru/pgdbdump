@@ -14,7 +14,6 @@ scriptdir="$(dirname "$(realpath "$0")")"
 # Source common script part
 . "$scriptdir/pgdbdump_common.sh"
 
-backpath="$dbname"
 tmppath=$(mktemp -d)
 trap "rm -r $tmppath" 0 2 3 15
 outfile=${tmppath}/_pgdump_temp

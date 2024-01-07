@@ -72,4 +72,5 @@ if [ -z "$backdir" ] ; then
 fi
 # if base name contains characters '_' or '%' replace them by '%1' and '%0' accordingly
 dbname=$(echo "$1" | sed -e 's/%/%0/g; s/_/%1/g')
+backpath="$backdir/$dbname"
 #####################

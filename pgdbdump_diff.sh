@@ -15,7 +15,6 @@ scriptdir="$(dirname "$(realpath "$0")")"
 # Source common script part
 . "$scriptdir/pgdbdump_common.sh"
 
-backpath="$backdir/$dbname"
 # locate and read latest dump timestamp file
 lfdfile=${backpath}/_${dbname}_latest_dump
 if [ -f "$lfdfile" ] ; then
