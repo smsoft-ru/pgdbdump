@@ -1,43 +1,48 @@
 pgdbdump v1.0
 
-A set of linux shell scripts intended for creating full, differential, or incremental dumps of postgres databases.
-This set of scripts also include interactive based on dialog (which in turn is ncurses-based) script for restore these dumps.
+A set of Linux shell scripts designed to create full, differential, or incremental dumps of postgres databases.
+This set of scripts also includes an interactive script based on dialog (which in turn is based on ncurses)
+to restore these dumps.
 
 (C) 2024 Sergey Merzlikin sm@smsoft.ru
 
 Licensed under the GNU General Public License v3.0.
 
-pgdbdump.sh is used to create dumps. How it works creating full dump:
-1. It creates raw text dump of database in temporary directory.
-2. It creates rdiff signature for created dump and stores it in backup directory.
-3. It compresses the dump with lrzip, pixz, xz or 7-zip (depending on options in config file and on size of raw dump)
-   and stores it in backup directory. Temporary uncompressed dump deletes after it. Information about date and dump type
-   contains in compressed dump filename.
+pgdbdump.sh is used to create dumps. When creating a full dump, it works like this:
 
-How it works creating differential or incremental dump:
-1. It creates raw text dump of database in temporary directory.
-2. It creates rdiff delta file in temporary directory based on previously stored rdiff signature.
-3. Only when creating incremental dump, it creates rdiff signature for created dump and replaces it in backup directory.
-3. It compresses rdiff delta with above mentioned archivers and stores it in backup directory. Temporary uncompressed
-   dump and delta delete after it. Information about date and dump type contains in compressed delta filename.
+1. It creates a text dump of the database in raw format in a temporary directory.
+2. It creates a rdiff signature for the created dump and stores (or replaces if exists) it in the backup directory.
+3. It compresses the dump using lrzip, pixz, xz or 7-zip (depending on the options in the configuration file and the
+   size of the dump) and saves it in the backup directory. The temporary uncompressed dump is then deleted.
+   Dump date and type information contained in the compressed dump file name.
 
-Primarily pgdbdump.sh is designed to start via cron jobs.
+When creating a differential or incremental dump, it works like this:
 
-pgdbrestore.sh is interactive (with non-interactive option) user-friendly script intended for restore postgres
-database archives into new or original database. Also, it is possible to reconstruct raw text dump to subsequent manual
-restore of database (possibly on another machine).
-The script unpacks and combines differential, incremental and full dumps (using rdiff) and applies resulting
-full dump to postgres database.
-Dialog screens of the script allows to select database to restore, date of archive, restore mode (into original 
-database, new database or save raw full dump) and some other options.
+1. It creates a text dump of the database in raw format in a temporary directory.
+2. It creates a rdiff delta file in a temporary directory using the previously saved rdiff signature.
+3. Only when creating an incremental dump, it creates a rdiff signature for the created dump and replaces it in the
+   backup directory.
+4. It compresses the rdiff delta file with the above-mentioned archivers and stores it in the backup directory.
+   Temporary uncompressed dump and the delta file are then deleted. Information about the date and type of dump
+   is contained in the name of the compressed delta file.
 
-Dialog screens and log messages may appear on different national languages. Currently supported English and Russian
-languages. Support for other languages may appear in future.
+The main way to run pgdbdump.sh is through cron jobs.
 
-Both scripts may log their activity and errors in systemd journal and syslog.
-Command-line parameters and config options are explained at the beginning of corresponding files.
+pgdbrestore.sh is an interactive (with the ability to run non-interactively) user-friendly script designed to restore
+postgres database archives created by the pgdbdump.sh script to the new or original database. It is also possible
+reconstruct a text dump in raw format for subsequent manual recovery (possibly on another machine).
+The script unpacks and combines differential, incremental and full dumps (using rdiff), and using the resulting
+full raw dump restores the postgres database. The script dialog screens allow to select the database to restore, the date
+of archive, recovery mode (to the original database, new database or save a full dump on disk) and some other options.
+
+Dialog boxes and log messages may be displayed in different national languages. Currently supported are English
+and Russian languages. Support for other languages may be available in the future.
+
+Both scripts can log their actions and errors to the systemd journal and syslog. Command line parameters and
+configuration options are described at the beginning of the corresponding files.
 
 Dependencies:
+
  - postgres (pg_dump, psql)
  - rdiff
  - lrzip
@@ -49,17 +54,17 @@ Dependencies:
  - realpath
  - logger
 
-Compressing utilities are needed only those which are configured (for compression) and which type of archives are
-present (for decompression). If "auto" compression type chosen (default), then pixz and lrzip are used if installed
-(recommended), and xz otherwise.
+Compression utilities require only those that are configured (for compression), and for which the corresponding archive
+types are present in the backup directory (for unpacking). If the compression type is "auto" (default), then pixz and
+lrzip are used, if installed (recommended), and xz otherwise.
 
-Most of above dependencies are already present in modern linux distributives.
+Most of the above dependencies are already present in modern Linux distributions.
 
 Installation:
- - Check dependencies and install any if required
- - Copy config files to /etc/pgdbdump directory
- - Copy all other files to any directory in file system (all files must be together)
- - Change permissions to make executable for pgdbdump.sh, pgdbdump_diff.sh, pgdbdump_full.sh and pgdbrestore.sh
- - Set up backup directory in config files
- - Set up cron jobs to create dumps on regular basis
 
+ - Check dependencies and install missing ones if necessary
+ - Copy the configuration files to the /etc/pgdbdump directory
+ - Copy the remaining files to any directory on the file system (all files must be together)
+ - Change file permissions to make them executable: pgdbdump.sh, pgdbdump_diff.sh, pgdbdump_full.sh and pgdbrestore.sh
+ - Set up the backup directory in the configuration files
+ - Set up cron jobs to generate dumps on a regular basis
