@@ -66,3 +66,46 @@ pgdbrestore.sh - это интерактивный (с возможностью 
  - Измените права файлов, чтобы сделать исполняемыми: pgdbdump.sh, pgdbdump_diff.sh, pgdbdump_full.sh и pgdbrestore.sh
  - Настройте каталог резервных копий в конфигурационных файлах
  - Настройте задания cron для создания дампов на регулярной основе
+
+Несколько скриншотов работы скрипта pgdbrestore.sh:
+
+Выбор базы данных для восстановления
+
+![Экран выбора базы](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/ru/pgdbrestore_selectdb.png)
+
+Настройка диапазона дат для поиска и отображения дампов
+
+![Экран выбора диапазона дат](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/ru/pgdbrestore_ranges.png)
+
+Панель календаря появляется после активации экранной кнопки "Изменить" на предыдущем скриншоте
+
+![Экран выбора даты](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/ru/pgdbrestore_calendar.png)
+
+Этот экран позволяет выбрать конкретный дамп для восстановления
+
+![Экран выбора дампа](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/ru/pgdbrestore_selectdump.png)
+
+Выбор режима восстановления
+
+![Экран выбора режима](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/ru/pgdbrestore_mode.png)
+
+Выбран режим сохранения реконструированного дампа: выбор каталога для сохранения файла дампа
+
+![Экран выбора каталога](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/ru/pgdbrestore_selectdir.png)
+
+Выбран режим восстановления в новую базу данных: задание имени новой базы данных
+
+![Экран ввода имени базы данных](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/ru/pgdbrestore_newdb.png)
+
+Подтверждение создания новой базы данных
+
+![Экран подтверждения](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/ru/pgdbrestore_confirm.png)
+
+Процесс восстановления начался
+
+![Экран отображения хода процесса](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/ru/pgdbrestore_progress.png)
+
+База данных успешно восстановлена
+
+![Экран завершения](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/ru/pgdbrestore_completed.png)
+ 
