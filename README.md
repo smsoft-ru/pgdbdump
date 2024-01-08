@@ -77,7 +77,7 @@ Selection of database to restore
 
 Setting range of dates to search and display dumps
 
-![Select date range screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_ranges.png)
+![Select date range screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_daterange.png)
 
 Calendar panel appears after activating of button "Change" on above screen
 
