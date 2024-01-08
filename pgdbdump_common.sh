@@ -1,5 +1,5 @@
 #####################
-# pgdbdump_common
+# pgdbdump_common v1.0
 #####################
 # Common parts for scripts related to creating dumps of postgres databases
 # (C) 2023-2024 Sergey Merzlikin sm@smsoft.ru
