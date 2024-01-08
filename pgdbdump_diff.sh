@@ -1,6 +1,6 @@
 #!/bin/sh
 #####################
-# pgdbdump_diff
+# pgdbdump_diff v1.0
 #####################
 # Script for creating differential and incremental dumps of postgres databases
 # (C) 2023-2024 Sergey Merzlikin sm@smsoft.ru
