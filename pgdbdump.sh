@@ -1,6 +1,6 @@
 #!/bin/sh
 #####################
-# pgdbdump
+# pgdbdump v1.0
 #####################
 # Script for creating full, differential or incremental dumps of postgres databases
 # (C) 2024 Sergey Merzlikin sm@smsoft.ru
