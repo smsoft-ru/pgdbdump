@@ -93,7 +93,7 @@ Selection of restore mode
 
 Saving reconstructed full dump chosen: selecting directory to save dump file
 
-![Select directory screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_seldir.png)
+![Select directory screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_selectdir.png)
 
 Restoring to new database chosen: setting new database name
 
@@ -101,7 +101,7 @@ Restoring to new database chosen: setting new database name
 
 Confirmation of creating new database
 
-![Confirm creation new database screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_sure.png)
+![Confirm creation new database screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_confirm.png)
 
 Restore process started
 
@@ -109,5 +109,5 @@ Restore process started
 
 Database is successfully restored as new database
 
-![Complete screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_progress2.png)
+![Complete screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_completed.png)
  
