@@ -75,7 +75,7 @@ pgdbrestore.sh - это интерактивный (с возможностью 
 
 Настройка диапазона дат для поиска и отображения дампов
 
-![Экран выбора диапазона дат](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/ru/pgdbrestore_ranges.png)
+![Экран выбора диапазона дат](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/ru/pgdbrestore_daterange.png)
 
 Панель календаря появляется после активации экранной кнопки "Изменить" на предыдущем скриншоте
 
