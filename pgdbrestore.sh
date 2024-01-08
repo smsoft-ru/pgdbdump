@@ -1,6 +1,6 @@
 #!/bin/bash
 #####################
-# pgdbrestore
+# pgdbrestore v1.0
 #####################
 # Interactive script for restoring full/incremental/differential dumps of postgres databases
 # (C) 2023-2024 Sergey Merzlikin sm@smsoft.ru
