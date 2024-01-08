@@ -71,43 +71,43 @@ Installation:
    
 Some screen shots of pgdbrestore script:
 
-Selection of database to restore
+Selecting a database to restore
 
 ![Select database screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_selectdb.png)
 
-Setting range of dates to search and display dumps
+Setting the range of dates to search and display dumps
 
 ![Select date range screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_daterange.png)
 
-Calendar panel appears after activating of button "Change" on above screen
+The calendar panel appears after activating the "Change" on-screen button in the previous screenshot
 
 ![Select date screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_calendar.png)
 
-This screen allows to select exact dump to restore
+This screen allows to select a specific dump to restore
 
 ![Select dump screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_selectdump.png)
 
-Selection of restore mode
+Selecting a restore mode
 
 ![Select mode screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_mode.png)
 
-Saving reconstructed full dump chosen: selecting directory to save dump file
+Saving reconstructed full dump mode chosen: selecting the directory to save the dump file
 
 ![Select directory screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_selectdir.png)
 
-Restoring to new database chosen: setting new database name
+Restore to new database mode chosen: specifying a name for the new database
 
 ![Set new database name screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_newdb.png)
 
-Confirmation of creating new database
+Confirmation of creation of a new database
 
 ![Confirm creation new database screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_confirm.png)
 
-Restore process started
+The restore process started
 
 ![Progress screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_progress.png)
 
-Database is successfully restored as new database
+Database was successfully restored as new database
 
 ![Complete screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_completed.png)
  
