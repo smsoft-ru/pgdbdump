@@ -1,6 +1,6 @@
 #!/bin/sh
 #####################
-# pgdbdump_full
+# pgdbdump_full v1.0
 #####################
 # Script for creating full dumps of postgres databases
 # (C) 2023-2024 Sergey Merzlikin sm@smsoft.ru
