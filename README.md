@@ -68,3 +68,46 @@ Installation:
  - Change file permissions to make them executable: pgdbdump.sh, pgdbdump_diff.sh, pgdbdump_full.sh and pgdbrestore.sh
  - Set up the backup directory in the configuration files
  - Set up cron jobs to generate dumps on a regular basis
+   
+Some screen shots of pgdbrestore script:
+
+Selection of database to restore
+
+![Select database screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_selectdb.png)
+
+Setting range of dates to search and display dumps
+
+![Select date range screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_ranges.png)
+
+Calendar panel appears after activating of button "Change" on above screen
+
+![Select date screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_calendar.png)
+
+This screen allows to select exact dump to restore
+
+![Select dump screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_selectdump.png)
+
+Selection of restore mode
+
+![Select mode screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_mode.png)
+
+Saving reconstructed full dump chosen: selecting directory to save dump file
+
+![Select directory screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_seldir.png)
+
+Restoring to new database chosen: setting new database name
+
+![Set new database name screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_newdb.png)
+
+Confirmation of creating new database
+
+![Confirm creation new database screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_sure.png)
+
+Restore process started
+
+![Progress screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_progress.png)
+
+Database is successfully restored as new database
+
+![Complete screen](https://github.com/smsoft-ru/pgdbdump/blob/main/screenshots/en/pgdbrestore_progress2.png)
+ 
